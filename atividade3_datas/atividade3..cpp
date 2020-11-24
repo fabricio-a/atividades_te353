@@ -17,6 +17,14 @@ class DateOfBirth {
 		
 		bool checkDate() {
 			if(!(date[1] <= 12 && date[1] > 0)) return false;
+			
+			if(date[1]==2) {
+				if(isLeap() && date[1] =! 29) return false;
+				else if(date[1] =! 28) return false;
+			}
+			
+
+			
 			return true;
 		}
 		
