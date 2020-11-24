@@ -16,18 +16,27 @@ class DateOfBirth {
 		}
 		
 		bool checkDate() {
-			if(date[2] <= 2020) return false
-			if(date[1] == )
+			if(!(date[1] <= 12 && date[1] > 0)) return false;
+			return true;
 		}
 		
 		bool isLeap() {
 			if(!(date[2] % 4)) {
 				if(!(date[2] % 100)){
-					if(!(date[2] % 400)) return true
-					else return false
+					if(!(date[2] % 400)) return true;
+					else return false;
 				} else return true;
 			} else return false;
-		}	
+		}
+		
+		void printInFull() {
+			
+			cout << date[0] << " de" << " mes" << " de " << date[2];
+		}
+		
+		void printZodiac() {
+			cout << "\nsigno";
+		}
 };
 
 int main() {
@@ -43,8 +52,8 @@ int main() {
 		date.printInFull();
 		date.printZodiac();
 		
-		if(date.isLeap()) cout >> "\nEh bissexto!"
-		else cout >> "\nNao eh bissexto!"
+		if(date.isLeap()) cout << "\nEh bissexto!";
+		else cout << "\nNao eh bissexto!";
 	} else {
 		cout << "Data Invalida!!";
 	}
