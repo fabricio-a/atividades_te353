@@ -35,6 +35,7 @@ class DateOfBirth {
 			if(date[1]==2) {
 				if(isLeap() && (date[1] <= 29)) return true;
 				else if(date[1] <= 28) return true;
+				return false;
 			}
 			else if(date[1] % 2 == 0 && date[1] > 7) {
 				if(date[0] <= 31) return true;
@@ -99,6 +100,8 @@ int main() {
 	} else {
 		cout << "Data Invalida!!";
 	}
+	
+	system("PAUSE");
 	
 	return 0;
 }
